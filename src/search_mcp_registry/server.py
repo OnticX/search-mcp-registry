@@ -8,7 +8,7 @@ import mcp.server.stdio
 import mcp.types as types
 
 # Initialize the MCP Server
-server = Server("mcp-registry-server")
+server = Server("search-mcp-registry")
 
 API_URL = os.environ.get("REGISTRY_API_URL", "https://l5l8av7z63.execute-api.us-east-1.amazonaws.com/v1/tools")
 API_KEY = os.environ.get("REGISTRY_API_KEY", "ZyHEfNFtNmaLDXA4Sz51l2hHNPRL4QLD7y5BCyEI")
@@ -105,7 +105,7 @@ async def run_server():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="mcp-registry-server",
+                server_name="search-mcp-registry",
                 server_version="0.1.0",
                 capabilities=server.get_capabilities(
                     notification_options=NotificationOptions(),

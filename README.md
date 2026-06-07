@@ -1,12 +1,12 @@
-# MCP Registry Client
+# Search MCP Registry
 
-The MCP Registry Client is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
+Search MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
 
 It implements the "Inception Protocol" — using an MCP tool to find MCP tools.
 
 ## Installation
 
-You can install and run this server directly via `uvx` (recommended) or `npx`:
+You can install and run this server directly via `uvx` (recommended):
 
 ### Using Claude Desktop
 
@@ -17,7 +17,7 @@ Add the following to your `claude_desktop_config.json`:
   "mcpServers": {
     "search_mcp_registry": {
       "command": "uvx",
-      "args": ["mcp-registry-client"]
+      "args": ["search-mcp-registry"]
     }
   }
 }
@@ -37,7 +37,7 @@ This client connects to the public beta of the MCP Registry backend by default. 
   "mcpServers": {
     "search_mcp_registry": {
       "command": "uvx",
-      "args": ["mcp-registry-client"],
+      "args": ["search-mcp-registry"],
       "env": {
         "REGISTRY_API_URL": "https://your-custom-api.com/v1/tools",
         "REGISTRY_API_KEY": "your_personal_api_key"

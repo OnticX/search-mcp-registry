@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "mcp-registry-client"
+name = "search-mcp-registry"
 version = "0.1.0"
 description = "A native MCP Server that searches a global registry of MCP tools."
 readme = "README.md"
@@ -12,9 +12,10 @@ authors = [
   { name = "MCP Registry", email = "hello@example.com" }
 ]
 dependencies = [
-    "mcp",
-    "httpx"
+  "mcp",
+  "httpx"
 ]
 
 [project.scripts]
-mcp-registry-server = "mcp_registry_client.server:main"
+search-mcp-registry = "search_mcp_registry.server:main"
+
