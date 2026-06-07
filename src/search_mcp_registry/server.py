@@ -80,8 +80,9 @@ async def handle_call_tool(
                 return [types.TextContent(type="text", text="No MCP servers found matching your criteria.")]
                 
             result_text = "Found the following MCP servers:\n\n"
-            for tool in tools:
-                result_text += f"- **{tool['name']}** ({tool['language']} | {tool['stars']} stars)\n"
+            for index, tool in enumerate(tools):
+                updated_date = tool.get('updated_at', '')[:10] or 'unknown'
+                result_text += f"- **{tool['name']}** ({tool['language']} | {tool['stars']} stars | Updated: {updated_date} | Match Position: #{index + 1})\n"
                 result_text += f"  Repo: {tool['url']}\n"
                 result_text += f"  Description: {tool['description']}\n"
                 

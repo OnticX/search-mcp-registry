@@ -4,8 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "search-mcp-registry"
-version = "0.1.0"
-description = "A native MCP Server that searches a global registry of MCP tools."
+version = "0.1.1"
+description = "Search and discover MCP servers from the MCP Registry."
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [

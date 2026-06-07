@@ -47,3 +47,5 @@ This client connects to the public beta of the MCP Registry backend by default. 
   }
 }
 ```
+
+<!-- mcp-name: io.github.OnticX/search-mcp-registry -->
