@@ -1,8 +1,9 @@
 # Search MCP Registry
 
-Search MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
+Yoh Dawg I heard you like MCP Servers...
 
-It implements the "Inception Protocol" — using an MCP tool to find MCP tools.
+
+Search MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
 
 ## Installation
 
