@@ -3,7 +3,7 @@
 Yoh Dawg I heard you like MCP Servers...
 
 
-Search MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
+Open MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
 
 ## Installation
 
