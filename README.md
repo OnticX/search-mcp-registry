@@ -1,10 +1,10 @@
-# MCP Registry
+# Open MCP Registry
 
 The MCP registry provides MCP clients with a list of MCP servers, like an app store for MCP servers.
 
 [**📤 Publish my MCP server**](docs/modelcontextprotocol-io/quickstart.mdx) | [**⚡️ Live API docs**](https://registry.modelcontextprotocol.io/docs) | [**👀 Ecosystem vision**](docs/design/ecosystem-vision.md) | 📖 **[Full documentation](./docs)**
 
-## Development Status
+Open MCP Registry is a native Model Context Protocol (MCP) server that allows your AI agents (like Claude Desktop) to programmatically search, discover, and install other MCP servers. 
 
 **2025-10-24 update**: The Registry API has entered an **API freeze (v0.1)** 🎉. For the next month or more, the API will remain stable with no breaking changes, allowing integrators to confidently implement support. This freeze applies to v0.1 while development continues on v0. We'll use this period to validate the API in real-world integrations and gather feedback to shape v1 for general availability. Thank you to everyone for your contributions and patience—your involvement has been key to getting us here!
 
