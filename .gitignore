@@ -128,3 +128,6 @@ cython_debug/
 
 # uv
 uv.lock
+
+# Anthropic CLI Binaries
+mcp-publisher*

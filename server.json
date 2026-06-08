@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.OnticX/open-mcp-registry",
+  "description": "Search and discover MCP servers from the MCP Registry.",
+  "repository": {
+    "url": "https://github.com/OnticX/search-mcp-registry",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "open-mcp-registry",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

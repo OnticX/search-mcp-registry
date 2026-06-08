@@ -8,7 +8,7 @@ import mcp.server.stdio
 import mcp.types as types
 
 # Initialize the MCP Server
-server = Server("search-mcp-registry")
+server = Server("open-mcp-registry")
 
 API_URL = os.environ.get("REGISTRY_API_URL", "https://l5l8av7z63.execute-api.us-east-1.amazonaws.com/v1/tools")
 API_KEY = os.environ.get("REGISTRY_API_KEY", "ZyHEfNFtNmaLDXA4Sz51l2hHNPRL4QLD7y5BCyEI")
@@ -21,7 +21,7 @@ if not API_URL or not API_KEY:
 async def handle_list_tools() -> list[types.Tool]:
     return [
         types.Tool(
-            name="search_mcp_registry",
+            name="open_mcp_registry",
             description="Search the MCP Tool Registry for available servers and tools.",
             inputSchema={
                 "type": "object",
@@ -48,7 +48,7 @@ async def handle_list_tools() -> list[types.Tool]:
 async def handle_call_tool(
     name: str, arguments: dict | None
 ) -> list[types.TextContent]:
-    if name != "search_mcp_registry":
+    if name != "open_mcp_registry":
         raise ValueError(f"Unknown tool: {name}")
 
     if not arguments:
@@ -82,7 +82,8 @@ async def handle_call_tool(
             result_text = "Found the following MCP servers:\n\n"
             for index, tool in enumerate(tools):
                 updated_date = tool.get('updated_at', '')[:10] or 'unknown'
-                result_text += f"- **{tool['name']}** ({tool['language']} | {tool['stars']} stars | Updated: {updated_date} | Match Position: #{index + 1})\n"
+                source = tool.get('source', 'GitHub')
+                result_text += f"- **[{source}] {tool['name']}** ({tool['language']} | {tool['stars']} stars | Updated: {updated_date} | Match Position: #{index + 1})\n"
                 result_text += f"  Repo: {tool['url']}\n"
                 result_text += f"  Description: {tool['description']}\n"
                 
@@ -106,7 +107,7 @@ async def run_server():
             read_stream,
             write_stream,
             InitializationOptions(
-                server_name="search-mcp-registry",
+                server_name="open-mcp-registry",
                 server_version="0.1.0",
                 capabilities=server.get_capabilities(
                     notification_options=NotificationOptions(),

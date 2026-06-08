@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "search-mcp-registry"
-version = "0.1.1"
+name = "open-mcp-registry"
+version = "0.1.0"
 description = "Search and discover MCP servers from the MCP Registry."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -17,5 +17,4 @@ dependencies = [
 ]
 
 [project.scripts]
-search-mcp-registry = "search_mcp_registry.server:main"
-
+open-mcp-registry = "open_mcp_registry.server:main"
