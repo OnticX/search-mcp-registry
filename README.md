@@ -1,4 +1,4 @@
-# Search MCP Registry
+# Open MCP Registry
 
 Yoh Dawg I heard you like MCP Servers...
 
